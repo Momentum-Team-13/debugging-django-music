@@ -22,7 +22,7 @@ urlpatterns = [
     path("", music_views.home, name="home"),
     path("auth/", include("registration.backends.simple.urls")),
     path("admin/", admin.site.urls),
-    path("albums/", music_views.list_albums, name="list_albums"),
+    path("albums/", music_views.list_album, name="list_albums"),
     path("albums/new", music_views.add_album, name="add_album"),
     path("albums/<int:pk>", music_views.show_album, name="show_album"),
     path("albums/<int:pk>/edit", music_views.edit_album, name="edit_album"),

@@ -19,6 +19,7 @@ class Album(BaseModel):
     release_date = models.DateField(blank=True, null=True)
     genres = models.ManyToManyField("Genre", related_name="albums")
     favorited_by = models.ManyToManyField(CustomUser, related_name="favorite_albums")
+    label = models.CharField(blank=True, null=True)
 
     def __repr__(self):
         return f"<Album {self.title} pk={self.pk} >"
